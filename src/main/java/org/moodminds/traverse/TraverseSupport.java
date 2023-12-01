@@ -49,8 +49,8 @@ import java.util.NoSuchElementException;
  * be achieved by ceasing all {@link Traverser Traversers} from providing items. To initiate a short-circuit in a Traverse
  * Source, stop consuming items from the {@link Traverser} within the traverse function while traversing a segment.
  * <p>
- * As a result of a Source traversal,
- * a boolean completion flag is returned, signifying whether the Source was entirely traversed or not.
+ * As a result of a Source traversal, a boolean completion flag is returned,
+ * signifying whether the Source was entirely traversed or not.
  *
  * @param <V> the type of item values
  * @param <E> the type of potential exceptions
