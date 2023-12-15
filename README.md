@@ -19,20 +19,36 @@ of API instances.
 One of the key motivations behind the introduction of **Traverse Streams** is its capability to envelop stream instances with interceptors,
 such as a transactional demarcating interceptor.
 
-## The Abstraction
 
-The structure of the **Traverse Streams** specification is as follows:
+## Abstraction Overview
 
-* `TraverseSupport`: this component acts as a Source of items that can be traversed either sequentially or in parallel.
-  It provides methods like `sequence`, `traverse` and `parallel`, enabling the utilization of a `Traverser` to process
-  each segment of the Source within the specified traverse function. Additionally, it allows for the transmission of a
-  key-value Context alongside a specific traverse function. The traversal completion is marked by a boolean flag returning,
-  indicating whether the Source was traversed entirely. The implementation can throw a `TraverseSupportException`
-  if traversal is unsupported.
-* `TraverseSupport.Traverser`: this component offers methods such as `next`, `some` and `each` to facilitate the traversal
-  of elements. It allows traversing elements individually, in portions, or in bulk sequentially using the specified consumer
-  functions that may throw checked exceptions.
-* `TraverseSupportException`: an exception indicating that synchronous traversal inherently is not supported.
+The **Traverse Streams** specification is organized into the following components:
+
+### `TraverseSupport`
+
+This component serves as a Source of items that can be traversed either sequentially or in parallel. It returns
+a boolean completion flag, indicating whether the Source was traversed entirely. The traversal is facilitated
+by utilizing segment `Traverser`s, which are processed within the specified traverse function. Three main traversal
+methods are provided:
+
+* **`sequence`**: Explicitly traverses the source sequentially with the specified segment traverse function.
+* **`traverse`**: Traverses the source with the specified segment traverse function either sequentially or in parallel,
+  depending on the inherent nature of the source.
+* **`parallel`**: Explicitly traverses the source in parallel (if supported or sequentially, otherwise) with the specified
+  traverse function.
+
+### `TraverseSupport.Traverser`
+
+This component offers methods to streamline the traversal of a source's segments' elements:
+
+* **`next`**: Traverses the next single element of a segment with the specified consumer.
+* **`some`**: Traverses elements with the specified testing consumer, returning a flag indicating whether the next
+  element is expected to consume.
+* **`each`**: Traverses each remaining element of a segment with the specified consumer.
+
+### `TraverseSupportException`
+
+An exception thrown by the traverse methods, indicating that synchronous traversal is not inherently supported by a traverse Source.
 
 ## Getting Started
 
