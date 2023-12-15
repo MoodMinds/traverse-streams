@@ -31,10 +31,10 @@ a boolean completion flag, indicating whether the Source was traversed entirely.
 by utilizing segment `Traverser`s, which are processed within the specified traverse function. Three main traversal
 methods are provided:
 
-* **`sequence`**: Explicitly traverses the source sequentially with the specified segment traverse function.
-* **`traverse`**: Traverses the source with the specified segment traverse function either sequentially or in parallel,
-  depending on the inherent nature of the source.
-* **`parallel`**: Explicitly traverses the source in parallel (if supported or sequentially, otherwise) with the specified
+* **`sequence`**: Explicitly traverses the Source sequentially with the specified segment traverse function.
+* **`traverse`**: Traverses the Source with the specified segment traverse function either sequentially or in parallel,
+  depending on the inherent nature of the Source.
+* **`parallel`**: Explicitly traverses the Source in parallel (if supported or sequentially, otherwise) with the specified
   traverse function.
 
 `TraverseSupport.Traverser`
