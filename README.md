@@ -39,7 +39,7 @@ methods are provided:
 
 ### `TraverseSupport.Traverser`
 
-This component offers methods to streamline the traversal of a source's segments' elements:
+This component offers methods to streamline the traversal of a Source's segments' elements:
 
 * **`next`**: Traverses the next single element of a segment with the specified consumer.
 * **`some`**: Traverses elements with the specified testing consumer, returning a flag indicating whether the next
