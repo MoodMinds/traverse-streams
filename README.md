@@ -24,7 +24,7 @@ such as a transactional demarcating interceptor.
 
 The **Traverse Streams** specification is organized into the following components:
 
-`TraverseSupport`
+**`TraverseSupport`**
 
 This component serves as a Source of items that can be traversed either sequentially or in parallel. It returns
 a boolean completion flag, indicating whether the Source was traversed entirely. The traversal is facilitated
@@ -37,7 +37,7 @@ methods are provided:
 * **`parallel`**: Explicitly traverses the Source in parallel (if supported or sequentially, otherwise) with the specified
   traverse function.
 
-`TraverseSupport.Traverser`
+**`TraverseSupport.Traverser`**
 
 This component offers methods to streamline the traversal of a Source's segments' elements:
 
@@ -46,7 +46,7 @@ This component offers methods to streamline the traversal of a Source's segments
   element is expected to consume.
 * **`each`**: Traverses each remaining element of a segment with the specified consumer.
 
-`TraverseSupportException`
+**`TraverseSupportException`**
 
 An exception thrown by the traverse methods, indicating that synchronous traversal is not inherently supported by a traverse Source.
 
