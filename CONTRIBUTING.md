@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-Thank you for your interest in contributing to Traverse Streams!
+Thank you for your interest in contributing to **Traverse Streams**!
 
 **Project Status: Experimental and Under Development**
 
