@@ -28,8 +28,8 @@ The **Traverse Streams** specification is organized into the following component
 
 This component serves as a Source of items that can be traversed either sequentially or in parallel. It returns
 a boolean completion flag, indicating whether the Source was traversed entirely. The traversal is facilitated
-by utilizing segment `Traverser`s, which are processed within the specified traverse function. Three main traversal
-methods are provided:
+by utilizing segment `TraverseSupport.Traverser`s, which are processed within the specified traverse function.
+Three main traversal methods are provided:
 
 * **`sequence`**: Explicitly traverses the Source sequentially with the specified segment traverse function.
 * **`traverse`**: Traverses the Source with the specified segment traverse function either sequentially or in parallel,
