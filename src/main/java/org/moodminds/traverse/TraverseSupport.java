@@ -97,7 +97,7 @@ public interface TraverseSupport<V, E extends Exception> {
      * contains {@code null} keys or values
      * @throws TraverseSupportException if traversal is not supported
      */
-    <H1 extends Exception, H2 extends Exception> boolean sequence(Executable1Throwing2<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2> traverse, Association<Object, Object, ?> ctx) throws E, H1, H2;
+    <H1 extends Exception, H2 extends Exception> boolean sequence(Executable1Throwing2<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2> traverse, Association<?, ?, ?> ctx) throws E, H1, H2;
 
     /**
      * Try to traverse the Source either sequentially or in parallel depending on the Source mode with the given
@@ -139,7 +139,7 @@ public interface TraverseSupport<V, E extends Exception> {
      * contains {@code null} keys or values
      * @throws TraverseSupportException if traversal is not supported
      */
-    <H1 extends Exception, H2 extends Exception> boolean traverse(Executable1Throwing2<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2> traverse, Association<Object, Object, ?> ctx) throws E, H1, H2;
+    <H1 extends Exception, H2 extends Exception> boolean traverse(Executable1Throwing2<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2> traverse, Association<?, ?, ?> ctx) throws E, H1, H2;
 
     /**
      * Try to traverse the Source explicitly in parallel (if the Source does support parallelism or sequentially,
@@ -182,7 +182,7 @@ public interface TraverseSupport<V, E extends Exception> {
      * contains {@code null} keys or values
      * @throws TraverseSupportException if traversal is not supported
      */
-    <H1 extends Exception, H2 extends Exception> boolean parallel(Executable1Throwing2<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2> traverse, Association<Object, Object, ?> ctx) throws E, H1, H2;
+    <H1 extends Exception, H2 extends Exception> boolean parallel(Executable1Throwing2<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2> traverse, Association<?, ?, ?> ctx) throws E, H1, H2;
 
 
     /**
@@ -229,7 +229,7 @@ public interface TraverseSupport<V, E extends Exception> {
      * contains {@code null} keys or values
      * @throws TraverseSupportException if traversal is not supported
      */
-    <H1 extends Exception, H2 extends Exception, H3 extends Exception> boolean sequence(Executable1Throwing3<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2, ? extends H3> traverse, Association<Object, Object, ?> ctx) throws E, H1, H2, H3;
+    <H1 extends Exception, H2 extends Exception, H3 extends Exception> boolean sequence(Executable1Throwing3<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2, ? extends H3> traverse, Association<?, ?, ?> ctx) throws E, H1, H2, H3;
 
     /**
      * Try to traverse the Source either sequentially or in parallel depending on the Source mode with the given
@@ -275,7 +275,7 @@ public interface TraverseSupport<V, E extends Exception> {
      * contains {@code null} keys or values
      * @throws TraverseSupportException if traversal is not supported
      */
-    <H1 extends Exception, H2 extends Exception, H3 extends Exception> boolean traverse(Executable1Throwing3<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2, ? extends H3> traverse, Association<Object, Object, ?> ctx) throws E, H1, H2, H3;
+    <H1 extends Exception, H2 extends Exception, H3 extends Exception> boolean traverse(Executable1Throwing3<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2, ? extends H3> traverse, Association<?, ?, ?> ctx) throws E, H1, H2, H3;
 
     /**
      * Try to traverse the Source explicitly in parallel (if the Source does support parallelism or sequentially,
@@ -322,7 +322,7 @@ public interface TraverseSupport<V, E extends Exception> {
      * contains {@code null} keys or values
      * @throws TraverseSupportException if traversal is not supported
      */
-    <H1 extends Exception, H2 extends Exception, H3 extends Exception> boolean parallel(Executable1Throwing3<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2, ? extends H3> traverse, Association<Object, Object, ?> ctx) throws E, H1, H2, H3;
+    <H1 extends Exception, H2 extends Exception, H3 extends Exception> boolean parallel(Executable1Throwing3<? super Traverser<? extends V, ? extends E>, ? extends H1, ? extends H2, ? extends H3> traverse, Association<?, ?, ?> ctx) throws E, H1, H2, H3;
 
 
     /**
